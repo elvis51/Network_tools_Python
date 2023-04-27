@@ -30,7 +30,7 @@ class Scanner:
 def main():
     ip = ''                             #enter ip address
     scanner = Scanner(ip)
-    scanner.scan(1, 200)                #enter port range
+    scanner.scan(, )                #enter port range(1, 99999)
     print(scanner.open_ports)          
 
 if __name__ == '__main__':
