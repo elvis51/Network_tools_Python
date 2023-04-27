@@ -19,7 +19,7 @@ class Scanner:
     def is_open(self, port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = s.connect_ex((self.ip, port))
-        print('port {}:    {}'.format(port,result))
+        print('port {}:    {}'.format(port,result))                     #print result
         s.close()
         return result == 0
 
@@ -28,10 +28,10 @@ class Scanner:
 
 
 def main():
-    ip = '10.1.0.90'
+    ip = ''                             #enter ip address
     scanner = Scanner(ip)
-    scanner.scan(1, 200)
-    print(scanner.open_ports)
+    scanner.scan(1, 200)                #enter port range
+    print(scanner.open_ports)          
 
 if __name__ == '__main__':
     main()
