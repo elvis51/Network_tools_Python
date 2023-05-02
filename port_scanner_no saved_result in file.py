@@ -19,7 +19,6 @@ class Scanner:
     def is_open(self, port):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = s.connect_ex((self.ip, port))
-        print('port {}:    {}'.format(port,result))                     #print result
         s.close()
         return result == 0
 
